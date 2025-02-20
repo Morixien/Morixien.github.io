@@ -1,0 +1,193 @@
+body {
+    background-color: #000;
+}
+
+#main-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#header {
+    background-color: #202020;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 20px;
+    width: 550px;
+}
+
+#explanation {
+    background-color: #202020;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 20px;
+    width: 550px;
+}
+
+#end-text {
+    background-color: #202020;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 20px;
+    width: 550px;
+    display: none;
+}
+
+#score {
+    background-color: #202020;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 20px;
+    width: 550px;
+    text-align: center;
+    display: none;
+}
+
+.bar-container {
+    width: 100%;
+    height: 30px;
+    background-color: #eaeaea;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    background-color: rgb(146, 179, 0);
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+    border-radius: 15px;
+}
+
+#grid {
+    background-color: #eaeaea;
+    border-radius: 8px;
+    margin-top: 50px;
+    padding: 3px;
+}
+
+.row {
+    display: flex;
+}
+
+.col {
+    align-items: center;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    height: 8.4vw;
+    margin: 5px;
+    width: 8.4vw;
+}
+
+.sqr {
+    background-color: transparent;
+    border: none;
+    color: transparent;
+    height: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+.note-0 {
+    background-image: url('albin.png');
+    background-size: cover;
+    background-position: center;
+    animation: zoomIn 1s forwards, shake 0.5s 1s forwards;
+    transform-origin: center center;
+}
+
+.note-1 {
+    background-image: url('albin-flipped.png');
+    background-size: cover;
+    background-position: center;
+    animation: zoomIn 1s forwards, shake 0.5s 1s forwards;
+    transform-origin: center center;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.note-missed {
+    background-image: url('albin.png');
+    background-size: cover;
+    background-position: center;
+    transform: rotate(180deg);
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(5px);
+    }
+}
+
+#begin {
+    background-color: #202020;
+    border: 2px solid #202020;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Poppins";
+    font-size: 1.5rem;
+    margin: 50px 20px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    transition: 0.7s;
+}
+
+#continue_btn {
+    background-color: #202020;
+    border: 2px solid #202020;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Poppins";
+    font-size: 1.5rem;
+    margin: 50px 20px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    transition: 0.7s;
+    display: none;
+}
+
+#begin:hover {
+    background-color: rgb(146, 179, 0);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+#continue_btn:hover {
+    background-color: rgb(146, 179, 0);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.7s;
+}
